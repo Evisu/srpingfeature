@@ -12,6 +12,8 @@ import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -33,13 +35,15 @@ public class SysLogAspect {
 	@Autowired
 	private SysLogService sysLogService;
 	
+	protected final Logger logger = LoggerFactory.getLogger(this.getClass());
+	
 	
 	@Pointcut("@annotation(com.jdyh.springfeature.annotation.SysLog)")
     public void logPointCut() {}
 	
 	@Around("logPointCut()")
     public Object around(ProceedingJoinPoint point) throws Throwable {
-		System.out.println("【系统日志环绕通知：】");
+		logger.info("【系统日志环绕通知：】");
         long beginTime = System.currentTimeMillis();
         Object result = point.proceed();
         long time = System.currentTimeMillis() - beginTime;
