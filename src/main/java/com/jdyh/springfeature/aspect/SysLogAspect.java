@@ -39,6 +39,7 @@ public class SysLogAspect {
 	
 	@Around("logPointCut()")
     public Object around(ProceedingJoinPoint point) throws Throwable {
+		System.out.println("【系统日志环绕通知：】");
         long beginTime = System.currentTimeMillis();
         Object result = point.proceed();
         long time = System.currentTimeMillis() - beginTime;
