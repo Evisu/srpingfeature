@@ -37,7 +37,6 @@ public class SysLogAspect {
 	
 	protected final Logger logger = LoggerFactory.getLogger(this.getClass());
 	
-	
 	@Pointcut("@annotation(com.jdyh.springfeature.annotation.SysLog)")
     public void logPointCut() {}
 	
