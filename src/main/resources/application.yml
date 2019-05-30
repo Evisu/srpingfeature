@@ -1,0 +1,22 @@
+server:
+  port: 8762
+
+spring:
+  application:
+    name: springfeature
+
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+ 
+management:
+  security:
+    eabled: false
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
