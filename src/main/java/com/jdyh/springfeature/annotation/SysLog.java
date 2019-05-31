@@ -7,13 +7,14 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * 	定义系统日志注解
+ * 定义系统日志注解
  * 
  * @author walkman
  */
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
-public @interface SysLog {
-    String value() default "";
+public @interface SysLog
+{
+	String value() default "";
 }

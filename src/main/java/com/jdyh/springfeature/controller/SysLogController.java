@@ -8,11 +8,13 @@ import com.jdyh.springfeature.annotation.SysLog;
 
 @RestController
 @RequestMapping("/sysLog")
-public class SysLogController {
-	
+public class SysLogController
+{
+
 	@SysLog("系统日志切面测试")
 	@RequestMapping("/excute")
-	public String excute(@RequestParam("pk") String pk) {
+	public String excute(@RequestParam("pk") String pk)
+	{
 		return "执行了excute方法";
 	}
 
