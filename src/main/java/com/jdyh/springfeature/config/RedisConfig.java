@@ -16,10 +16,11 @@ import org.springframework.data.redis.serializer.RedisSerializer;
 import org.springframework.data.redis.serializer.StringRedisSerializer;
 
 /**
- * 功能描述: redis配置
- *
- * @author: qinfeng
- * @date: 2018/12/11 0011 上午 9:16
+ *	功能描述: redis配置
+ * 
+ * @author walkman
+ * @date 2019年6月3日
+ * @description
  */
 @Configuration
 @EnableCaching
