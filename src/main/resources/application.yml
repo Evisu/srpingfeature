@@ -15,7 +15,7 @@ spring:
     database: 0           # Redis服务器数据库
     host: localhost    # Redis服务器地址
     port: 6379            # Redis服务器连接端口
-    password: 123456      # Redis服务器连接密码（默认为空）
+    password: root      # Redis服务器连接密码（默认为空）
     timeout: 6000ms       # 连接超时时间（毫秒）
     jedis:
       pool:

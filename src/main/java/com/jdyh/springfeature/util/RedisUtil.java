@@ -21,7 +21,6 @@ import org.springframework.util.CollectionUtils;
 public final class RedisUtil {
 
 	@Autowired
-
 	private RedisTemplate<String, Object> redisTemplate;
 
 	// =============================common============================
