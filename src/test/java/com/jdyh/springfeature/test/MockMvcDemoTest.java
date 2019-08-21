@@ -28,6 +28,7 @@ public class MockMvcDemoTest {
         		.andExpect(MockMvcResultMatchers.status().isOk()).andReturn();
         int status = mvcResult.getResponse().getStatus();
         System.out.println("请求接口返回状态值：【"+status+"】");
+        
     }
 
 }
