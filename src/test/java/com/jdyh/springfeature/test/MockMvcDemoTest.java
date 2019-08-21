@@ -20,7 +20,7 @@ public class MockMvcDemoTest {
     private MockMvc mockMvc;
     
     @Test
-    public void apiTest() throws Exception {
+    public void excuteTest() throws Exception {
         // perform: 执行一个 RequestBuilder 请求
         // andExpect: 添加 ResultMatcher -> MockMvcResultMatchers 验证规则
         // andReturn: 最后返回相应的 MvcResult
